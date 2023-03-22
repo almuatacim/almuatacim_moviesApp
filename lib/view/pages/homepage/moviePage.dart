@@ -1,57 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/core/constants.dart';
 import 'package:flutter_application_1/view/pages/homepage/data/model/actor.dart';
 import 'package:flutter_application_1/view/pages/homepage/data/model/movie_model.dart';
 import 'package:flutter_application_1/view/pages/homepage/data/reposotiry/moviereposotiry.dart';
-
 import 'data/model/genres_model.dart';
-
-// class MoviesPage extends StatefulWidget {
-//   const MoviesPage({super.key});
-
-//   @override
-//   State<MoviesPage> createState() => _MoviesPageState();
-// }
-
-// class _MoviesPageState extends State<MoviesPage> {
-//   HomeReposotiry homeReposotiry = HomeReposotiry();
-
-//   @override
-//   void initState() {
-//     homeReposotiry.fetchMovie();
-//     super.initState();
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return FutureBuilder<Movies>(
-//       future: homeReposotiry.fetchMovie(),
-//       builder: (context, snapshot) {
-//         if (snapshot.hasData) {
-//           return Scaffold(
-//             appBar: AppBar(
-//               title: Text("Movies Page"),
-//             ),
-//             body: ListView.builder(
-//               itemCount: snapshot.data!.data!.length,
-//               itemBuilder: (context, index) {
-//                 return ListTile(
-//                   title: Text(snapshot.data!.data![index].title.toString()),
-//                   subtitle:
-//                       Text(snapshot.data!.data![index].description.toString()),
-//                 );
-//               },
-//             ),
-//           );
-//         } else if (snapshot.hasError) {
-//           return Text(snapshot.error.toString());
-//         }
-//         return Center(child: CircularProgressIndicator());
-//       },
-//     );
-//   }
-// }
 
 class MoviesPage extends StatefulWidget {
   MoviesPage({super.key});
@@ -64,8 +16,6 @@ class _MoviesPageState extends State<MoviesPage> {
   HomeReposotiry homeReposotiry = HomeReposotiry();
   @override
   void initState() {
-    // homeReposotiry.fetchMovie();
-    // homeReposotiry.fetchGenres();
     super.initState();
   }
 
