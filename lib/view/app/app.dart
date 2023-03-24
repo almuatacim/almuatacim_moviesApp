@@ -16,7 +16,7 @@ class _AppState extends State<App> {
       theme: ThemeData(primarySwatch: Colors.green),
       debugShowCheckedModeBanner: false,
       title: ("My App"),
-      initialRoute: AppRoute.loginpage,
+      initialRoute: AppRoute.homepage,
       onGenerateRoute: AppRoute.ongenratedRoute,
     );
   }

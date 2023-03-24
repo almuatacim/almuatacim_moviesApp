@@ -17,10 +17,10 @@ class AppRoute {
   static Route<dynamic> ongenratedRoute(RouteSettings routesettings) {
     switch (routesettings.name) {
       case homepage:
-        var user = routesettings.arguments as User;
+        var user = routesettings.arguments as User?;
         return MaterialPageRoute(
           builder: (context) => HomePage(
-            user: user,
+            user: user ?? User(username: "username", password: "password"),
             // user: User(password: "", username: ""),
           ),
         );
